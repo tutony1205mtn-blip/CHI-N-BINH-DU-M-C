@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CHIẾN BINH DU MỤC – Zlatan Ibrahimović</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- HEADER -->
+    <header id="topBar">
+        <div class="title">
+            <span class="game-name">CHIẾN BINH DU MỤC</span>
+            <span class="chapter-name" id="headerChapter">CHƯƠNG 1</span>
+        </div>
+        <div class="nav">
+            <button id="prevBtn">←</button>
+            <button id="nextBtn">→</button>
+        </div>
+    </header>
+
+    <!-- COVER -->
+    <section id="cover">
+        <div class="cover-overlay"></div>
+        <div class="cover-content">
+            <div class="meta" id="chapterMeta"></div>
+            <h1 id="chapterTitle"></h1>
+            <blockquote id="chapterQuote"></blockquote>
+        </div>
+    </section>
+
+    <!-- STORY AREA -->
+    <main id="story">
+        <!-- narrative + dialogue sẽ render ở đây -->
+    </main>
+
+</div>
+
+<!-- ENGINE -->
+<script>
+/* KHỞI TẠO DANH SÁCH CHƯƠNG */
+window.ZLATAN_CHAPTERS = [];
+</script>
+
+<!-- LOAD CÁC FILE CHƯƠNG -->
+<script src="chapters/chapter_01.js"></script>
+<script src="chapters/chapter_02.js"></script>
+<script src="chapters/chapter_03.js"></script>
+<script src="chapters/chapter_04.js"></script>
+<script src="chapters/chapter_05.js"></script>
+<script src="chapters/chapter_06.js"></script>
+<script src="chapters/chapter_07.js"></script>
+<script src="chapters/chapter_08.js"></script>
+<script src="chapters/chapter_09.js"></script>
+<script src="chapters/chapter_10.js"></script>
+<script src="chapters/chapter_11.js"></script>
+<script src="chapters/chapter_12.js"></script>
+<script src="chapters/chapter_13.js"></script>
+<script src="chapters/chapter_14.js"></script>
+<script src="chapters/chapter_15.js"></script>
+<script src="chapters/chapter_16.js"></script>
+<script src="chapters/chapter_17.js"></script>
+<script src="chapters/chapter_18.js"></script>
+<script src="chapters/chapter_19.js"></script>
+<script src="chapters/chapter_20.js"></script>
+<script src="chapters/chapter_21.js"></script>
+<script src="chapters/chapter_22.js"></script>
+<script src="chapters/chapter_23.js"></script>
+<script src="chapters/chapter_24.js"></script>
+<script src="chapters/chapter_25.js"></script>
+<script src="chapters/chapter_26.js"></script>
+<script src="chapters/chapter_27.js"></script>
+<script src="chapters/chapter_28.js"></script>
+<script src="chapters/chapter_29.js"></script>
+<script src="chapters/chapter_30.js"></script>
+
+<!-- GAME ENGINE -->
+<script src="engine.js"></script>
+
+</body>
+</html>

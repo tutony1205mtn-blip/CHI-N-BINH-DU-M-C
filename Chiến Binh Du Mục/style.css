@@ -1,0 +1,227 @@
+/* =====================================
+   CHIẾN BINH DU MỤC – STYLE
+   ===================================== */
+
+:root {
+  --bg-main: #0e0d0b;
+  --bg-panel: #15130f;
+  --sand: #d6b56a;
+  --steel: #9fa4a8;
+  --text-main: #e8e6e3;
+  --text-soft: #b7b3ad;
+  --zlatan: #d4af37;
+  --system: #6fa8dc;
+  --border-soft: rgba(255,255,255,0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1b1812, #0a0907);
+  color: var(--text-main);
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ============ APP ============ */
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ============ HEADER ============ */
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #14120e, #0f0d0a);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+#topBar .title {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: var(--sand);
+}
+
+.chapter-name {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+#topBar .nav button {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--sand);
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+#topBar .nav button:disabled {
+  opacity: 0.3;
+}
+
+/* ============ COVER ============ */
+
+#cover {
+  position: relative;
+  padding: 26px 18px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.75), rgba(0,0,0,.95)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M0 0h160v160H0z' fill='%2315130f'/%3E%3C/svg%3E");
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(214,181,106,.15), transparent 60%);
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+}
+
+#chapterMeta {
+  font-size: 12px;
+  color: var(--steel);
+  margin-bottom: 6px;
+}
+
+#chapterTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  margin: 0 0 10px;
+  color: var(--sand);
+}
+
+#chapterQuote {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-soft);
+  border-left: 3px solid var(--sand);
+  padding-left: 10px;
+}
+
+/* ============ STORY ============ */
+
+#story {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Narrative */
+
+.narrative {
+  margin-bottom: 18px;
+}
+
+.narrative p {
+  line-height: 1.7;
+  font-size: 15px;
+  color: var(--text-main);
+  white-space: pre-wrap;
+}
+
+/* Dialogue */
+
+.dialogue {
+  max-width: 88%;
+  margin-bottom: 14px;
+}
+
+.dialogue.system {
+  align-self: flex-start;
+}
+
+.dialogue.zlatan {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.sender {
+  font-size: 11px;
+  opacity: .7;
+  margin-bottom: 4px;
+}
+
+.dialogue.zlatan .sender {
+  color: var(--zlatan);
+  text-align: right;
+}
+
+.dialogue.system .sender {
+  color: var(--system);
+}
+
+.bubble {
+  padding: 10px 12px;
+  border-radius: 12px;
+  line-height: 1.5;
+  font-size: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border-soft);
+  white-space: pre-wrap;
+}
+
+.dialogue.zlatan .bubble {
+  background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(212,175,55,.05));
+}
+
+.dialogue.system .bubble {
+  background: linear-gradient(135deg, rgba(111,168,220,.18), rgba(111,168,220,.05));
+}
+
+/* Typing effect */
+
+.typing::after {
+  content: "▌";
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  opacity: .8;
+}
+
+@keyframes blink {
+  0%,50%,100% { opacity: .2; }
+  25%,75% { opacity: .8; }
+}
+
+/* ============ SCROLLBAR (ANDROID OK) ============ */
+
+#story::-webkit-scrollbar {
+  width: 6px;
+}
+
+#story::-webkit-scrollbar-thumb {
+  background: rgba(214,181,106,.3);
+  border-radius: 6px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 480px) {
+  #chapterTitle {
+    font-size: 20px;
+  }
+  .narrative p {
+    font-size: 14px;
+  }
+}
